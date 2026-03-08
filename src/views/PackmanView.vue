@@ -6,26 +6,7 @@ const sketchContainer = ref(null)
 let p5Instance = null
 let direction = "right"
 const sketch = (p) => {
-  p.setup = function () {
-    p.createCanvas(800, 600)
-  }
-
-  p.draw = function () {
-    p.background(0)
-    p.fill(255);
-    p.arc(50, 50, 80, 80, 0, p.PI + p.HALF_PI);
-    p.arc(50, 150, 80, 80, 0, p.PI + p.HALF_PI, p.PIE);
-    p.arc(150, 50, 80, 80, 0, p.PI + p.QUARTER_PI);
-    p.arc(250, 50, 80, 80, 0, p.PI + p.TWO_PI);
-    p.arc(350, 50, 80, 80, 0, p.PI + p.QUARTER_PI, p.OPEN);
-    p.arc(450, 50, 80, 80, 0, p.PI + p.HALF_PI, p.OPEN);
-    p.arc(450, 150, 80, 80, 0, p.PI + p.HALF_PI, p.CHORD);
-    p.arc(550, 55, 80, 80, p.HALF_PI, p.PI);
-    p.arc(550, 55, 80, 80, 250,  p.QUARTER_PI, p.PI);
-
-
-
-
+  const packman = () => {
     p.noStroke();
     p.fill(255, 255, 0);
     let biteSize = p.PI / 16;
@@ -52,26 +33,41 @@ const sketch = (p) => {
     }
     p.arc(x, y, 40, 40, 0, p.PI + p.PI);
 
-
-    //p.textAlign(CENTER);
-    p.textSize(16);
-    p.text(direction, 500, 500);
-
     if (p.keyIsPressed === true) {
       if (p.key === 'z') {
         direction = "up";
       } else if (p.key === 'q') {
         direction = "left"
-      }
-      else if (p.key === 's') {
+      } else if (p.key === 's') {
         direction = "down"
-      }
-      else if (p.key === 'd') {
+      } else if (p.key === 'd') {
         direction = "right"
       }
+    }
+  }
+
+  p.setup = function () {
+    p.createCanvas(800, 600)
+  }
+
+
+  p.draw = function () {
+    p.background(0)
+    p.fill(255);
+    p.arc(50, 50, 80, 80, 0, p.PI + p.HALF_PI);
+    p.arc(50, 150, 80, 80, 0, p.PI + p.HALF_PI, p.PIE);
+    p.arc(150, 50, 80, 80, 0, p.PI + p.QUARTER_PI);
+    p.arc(250, 50, 80, 80, 0, p.PI + p.TWO_PI);
+    p.arc(350, 50, 80, 80, 0, p.PI + p.QUARTER_PI, p.OPEN);
+    p.arc(450, 50, 80, 80, 0, p.PI + p.HALF_PI, p.OPEN);
+    p.arc(450, 150, 80, 80, 0, p.PI + p.HALF_PI, p.CHORD);
+    p.arc(550, 55, 80, 80, p.HALF_PI, p.PI);
+    p.arc(550, 55, 80, 80, 250,  p.QUARTER_PI, p.PI);
+
+    packman();
 
   }
-}}
+}
 
 onMounted(() => {
   if (sketchContainer.value) {
