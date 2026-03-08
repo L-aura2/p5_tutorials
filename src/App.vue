@@ -9,6 +9,7 @@
     <li>  <RouterLink to="/exercise-2">Exercise 2</RouterLink>
     </li>
     <li> <RouterLink to="/packman">Packman</RouterLink></li>
+    <li> <RouterLink to="/spook">Spook</RouterLink></li>
   </ul>
   <RouterView></RouterView>
 </template>
