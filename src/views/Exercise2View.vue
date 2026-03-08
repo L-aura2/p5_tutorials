@@ -13,22 +13,26 @@ const sketch = (p) => {
   p.draw = function () {
     p.background(220)
 
-    p.stroke(0) // Black color
-    p.line(p.mouseX, 6, p.mouseX, p.mouseY) // Vertical line following mouseX
+    p.fill(255) //white text
+    p.text(`x: ${p.mouseX}, y: ${p.mouseY}`, 20, 20);
 
-    //p.textAlign(p.CENTER, p.CENTER)
-    p.textSize(16)
-    p.text(`x: ${p.mouseX} y: ${p.mouseY}`, 50, 50);
 
-    p.stroke(255, 0, 0) // Red color
-    p.fill(255, 0, 0, 100) // Semi-transparent red
-    p.text('Hello, p5.js!', 50, 65)
-    p.square(300, 200, 100)
-    //p.circle(150, 300, 100)
-    p.fill(0, 255, 0, 100) // Semi-transparent green
-    p.text('text', 200, 200)
-    p.stroke(0, 0, 0, 0)
-    p.circle(250, 300, 100)
+    //p.stroke(0) // Black color
+    //p.line(p.mouseX, 6, p.mouseX, p.mouseY) // Vertical line following mouseX
+//
+    ////p.textAlign(p.CENTER, p.CENTER)
+    //p.textSize(16)
+    //p.text(`x: ${p.mouseX} y: ${p.mouseY}`, 50, 50);
+//
+    //p.stroke(255, 0, 0) // Red color
+    //p.fill(255, 0, 0, 100) // Semi-transparent red
+    //p.text('Hello, p5.js!', 50, 65)
+    //p.square(300, 200, 100)
+    ////p.circle(150, 300, 100)
+    //p.fill(0, 255, 0, 100) // Semi-transparent green
+    //p.text('text', 200, 200)
+    //p.stroke(0, 0, 0, 0)
+    //p.circle(250, 300, 100)
   }
 
 }
