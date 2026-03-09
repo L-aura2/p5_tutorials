@@ -10,7 +10,10 @@
     "lint": "run-s lint:*",
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",
-    "format": "prettier --write --experimental-cli src/"
+    "format": "prettier --write --experimental-cli src/",
+    "docs:dev": "vitepress dev src\\docs",
+    "docs:build": "vitepress build src\\docs",
+    "docs:preview": "vitepress preview src\\docs"
   },
   "dependencies": {
     "p5": "^2.2.2",

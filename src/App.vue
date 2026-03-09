@@ -10,6 +10,8 @@
     </li>
     <li> <RouterLink to="/packman">Packman</RouterLink></li>
     <li> <RouterLink to="/spook">Spook</RouterLink></li>
+    <li> <RouterLink to="/grid">Grid</RouterLink></li>
+    <li> <RouterLink to="/pptdemo">pptDemo</RouterLink></li>
   </ul>
   <RouterView></RouterView>
 </template>

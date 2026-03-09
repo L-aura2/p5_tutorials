@@ -3,6 +3,9 @@ import Exercise2View from "@/views/Exercise2View.vue";
 import HomeView from "@/views/HomeView.vue";
 import PackmanView from "@/views/PackmanView.vue";
 import SpookView from "@/views/SpookView.vue";
+import GridView from "@/views/GridView.vue";
+import pptDemoView from '@/views/pptDemoView.vue'
+import PrettyExample from '@/demo/views/PrettyExample.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,6 +21,15 @@ const router = createRouter({
     },
     {
       path: "/spook", component: SpookView,
+    },
+    {
+      path: "/grid", component: GridView
+    },
+    {
+      path: "/pptdemo", component: pptDemoView
+    },
+    {
+      path: "/demo", component: PrettyExample
     }
   ],
 })
